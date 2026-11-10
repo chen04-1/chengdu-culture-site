@@ -490,3 +490,43 @@ img {
 		bottom: 20px;
 	}
 }
+
+/* 内页与全站导航 */
+.brand { display: inline-flex; align-items: center; gap: 10px; line-height: 1.2; }
+.brand .brand-mark { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid var(--gold); font-size: 23px; }
+.brand b, .brand small { display: block; }
+.brand small { margin-top: 5px; font: 9px/1 "Noto Sans SC", sans-serif; letter-spacing: 2px; }
+.footer-brand { color: #f8f5ef; }
+.menu-toggle { display: none; border: 1px solid var(--gold); background: transparent; color: var(--dark); padding: 5px 12px; font-size: 21px; cursor: pointer; }
+.page-hero { background: linear-gradient(115deg, #29251f, #6c5741); color: white; }
+.page-hero-inner { width: min(1250px, 90%); margin: auto; padding: 95px 0 80px; }
+.page-hero h1 { font-size: clamp(38px, 6vw, 64px); letter-spacing: .08em; line-height: 1.3; }
+.page-hero p { margin: 20px 0 28px; color: #eee4d5; }
+.page-hero a { color: var(--gold-light); font-size: 14px; }
+.page-hero a span { margin: 0 10px; }
+.content-card { display: flex; flex-direction: column; }
+.content-card img { aspect-ratio: 4 / 3; height: auto; object-fit: cover; }
+.content-card .card-copy { padding: 24px; }
+.content-card h3, .content-card p { padding: 0; }
+.content-card h3 { margin: 6px 0 10px; }
+.content-card p { line-height: 1.9; }
+.card-number, .guide-card > span { color: var(--gold); font: 12px/1.4 "Noto Sans SC", sans-serif; letter-spacing: 2px; }
+.image-credit { display: inline-block; margin-top: 16px; color: #80663a; font-size: 12px; }
+.guide-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 25px; }
+.guide-card { background: white; padding: 30px; border-top: 2px solid var(--gold); box-shadow: 0 8px 30px rgba(65,48,25,.07); }
+.guide-card h3 { margin: 8px 0 15px; font-size: 22px; color: var(--dark); }
+.guide-card p { margin-top: 10px; color: #6f675c; font-size: 15px; }
+.guide-card b { color: var(--brown); }
+.guide-details { background: #eee8dc; }
+.guide-details .guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+@media (max-width: 900px) { .guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+ .menu-toggle { display: block; }
+ .nav-wrap .main-nav { display: none; width: 100%; padding: 10px 0; }
+ .nav-wrap .main-nav.is-open { display: flex; }
+ .page-hero-inner { padding: 65px 0 55px; }
+ .guide-grid, .guide-details .guide-grid { grid-template-columns: 1fr; }
+ .guide-card { padding: 24px; }
+ .eyebrow { letter-spacing: 3px; }
+}
