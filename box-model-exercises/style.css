@@ -1,0 +1,25 @@
+﻿* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", sans-serif; color: #333; }
+.shopping-page, .pet-page { padding: 30px 10px; }
+.shopping { width: 740px; height: 620px; max-width: 100%; margin: 0 auto; padding: 18px; border-radius: 15px; background: #f4f1f8; }
+.shopping h1 { text-align: center; font-size: 26px; margin-bottom: 18px; }
+.products { display: grid; grid-template-columns: repeat(3, 206px); justify-content: space-evenly; gap: 20px 0; }
+.product { width: 206px; border: 10px groove #9966cc; box-shadow: 4px 4px 8px #ccc; background: white; }
+.product:hover { border-style: dashed; border-color: #9999cc; }
+.product img { width: 186px; height: 204px; display: block; }
+.pet-box { width: 370px; max-width: 100%; height: 550px; margin: 0 auto; padding: 12px 10px; border-radius: 15px; background: url('assets/bg.gif') repeat; box-shadow: 5px 5px 10px rgba(0,0,0,.35); }
+.pet-box h1 { height: 36px; line-height: 30px; padding-left: 10px; border-left: 5px solid #bbeb2c; margin: 7px 0 12px; font-size: 24px; }
+.pet-inner { width: 350px; max-width: 100%; height: 460px; padding: 10px 12px; background: white; box-shadow: 3px 3px 8px rgba(0,0,0,.25); }
+.pet-inner ul { list-style: none; }
+.pet-inner li { height: 48px; line-height: 48px; border-bottom: 1px dashed #ccc; padding-left: 20px; background: url('assets/tb.gif') no-repeat left center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.pet-inner a { color: #333; font-size: 18px; text-decoration: none; }
+.pet-inner a:hover, .pet-inner a:focus-visible { font-weight: bold; color: #739311; text-shadow: 1px 1px 2px #bbeb2c; }
+.back { text-align: center; margin: 20px auto; font-size: 14px; }.back a { color: #555; }
+.extension-page { background: #f4f4f4; padding: 40px 15px; }
+.book, .old-town, .exercise-index { max-width: 800px; margin: auto; padding: 30px; background: white; box-shadow: 0 4px 14px #ccc; }
+.book h1, .old-town h1, .exercise-index h1 { border-bottom: 2px solid #a32b25; padding-bottom: 12px; margin-bottom: 25px; }
+.book-item { display: flex; gap: 20px; line-height: 1.8; }.book-item h2 { font-size: 20px; color: #315e83; }.book-item p { margin: 8px 0; }.rank { font-size: 24px; color: #be332a; }.review { color: #b43528; }.price { color: #be332a; font-size: 22px; }.price small, .price del { font-size: 14px; color: #777; }.book-actions button { padding: 6px 18px; }
+.old-town p { text-indent: 2em; font-size: 28px; line-height: 1.5; letter-spacing: 2px; text-decoration: underline; }
+.exercise-index ol { padding-left: 25px; line-height: 2.3; }.exercise-index a { color: #315e83; }
+@media (max-width: 690px) { .shopping { height: auto; }.products { grid-template-columns: repeat(2, 206px); gap: 16px; } }
+@media (max-width: 460px) { .products { grid-template-columns: 206px; }.pet-inner a { font-size: 16px; }.book, .old-town, .exercise-index { padding: 20px; } }
